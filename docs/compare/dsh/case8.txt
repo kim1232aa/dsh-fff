@@ -1,0 +1,10 @@
+FFF v0.11.0
+basePath: /workspace/fff-compare/tmp/repo-snapshot
+Git: yes (/workspace/fff-compare/tmp/repo-snapshot/)
+Picker: 233 files
+Frecency: active
+Query tracker: active
+DBs: frecency=/workspace/fff-compare/tmp/dsh-frec history=/workspace/fff-compare/tmp/dsh-hist
+Aux pickers: 0
+Scanning: no (233 files)
+FFF rescan triggered

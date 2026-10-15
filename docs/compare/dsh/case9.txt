@@ -1,0 +1,3 @@
+→ Read ssrf-protection.ts (only match — no need to search further)
+ssrf-protection.ts [def] (22KB - use offset to read relevant section)
+  389: 	if (ipVersion === 4 && isBlockedIPv4(normalized)) {
