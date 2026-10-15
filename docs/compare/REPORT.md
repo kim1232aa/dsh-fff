@@ -3,7 +3,7 @@
 - 目标仓库：`/workspace/pi-web-access` 的快照 `tmp/repo-snapshot`（两边同一份）
 - Pi 侧：真实加载 `~/.pi/agent/npm/node_modules/@ff-labs/pi-fff/src/index.ts`（用 pi 自带 jiti），走 `session_start` → 调工具 `execute`；health/rescan 走 `/fff-health` `/fff-rescan` 命令 handler（Pi 里它们是命令不是工具）。`pi-harness.mjs`
 - dsh 侧：真实加载 `/workspace/dsh-fff/index.js` 的 `apply()`，取注册的工具调 `execute`。`dsh-harness.mjs`
-- 两边都用全新的 frecency/history DB，避免排序被历史偏置。原始输出：`pi/caseN.txt`、`dsh/caseN.txt`；截图：`shots/*.png`
+- 两边都用全新的 frecency/history DB，避免排序被历史偏置。原始输出：`pi/caseN.txt`、`dsh/caseN.txt`；截图画廊：[`shots.html`](./shots.html)（内嵌压缩 JPEG；原始 PNG 在本地 `shots/`，MCP 无法推二进制）
 - 端到端（模型驱动 CLI）：`e2e/pi.txt`、`e2e/dsh2.txt`
 
 | # | 用例 | 参数 | 结论 |
@@ -17,7 +17,7 @@
 | 7 | ffgrep 拼写错误→模糊回退 | `{"pattern": "retriveContent", "limit": 5}` | 一致（逐字节相同，含模糊回退提示与 cursor） |
 | 8 | health + rescan | `{}` | 有差异：内容一致，格式不同（Pi notify 带 [info] 前缀 + Mode 行；dsh 多 basePath/DBs/Aux 行） |
 | 9 | ffgrep outputMode=files_with_matches | `{"pattern": "isBlockedIPv4", "outputMode": "files_with_matches", "limit": 10}` | 有差异：outputMode 是 dsh 扩展参数，Pi schema 无此参数→忽略按 content 输出 |
-| E2E | `pi -p` vs `dsh --profile ffftest`（现 `antigravity/gemini-3.8-flash`） | ffgrep isBlockedIPv4 | 一致：Gemini 调用 ffgrep，命中与 Pi 相同（见 `e2e/dsh-gemini.txt`、`shots/e2e-gemini.png`） |
+| E2E | `pi -p` vs `dsh --profile ffftest`（现 `antigravity/gemini-3.8-flash`） | ffgrep isBlockedIPv4 | 一致：Gemini 调用 ffgrep，命中与 Pi 相同（见 `e2e/dsh-gemini.txt`、[`shots.html`](./shots.html#e2e-gemini)） |
 
 ## 差异说明
 

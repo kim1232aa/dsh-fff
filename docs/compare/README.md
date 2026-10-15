@@ -2,7 +2,8 @@
 
 See [REPORT.md](./REPORT.md) for the full table and notes.
 
-- `shots/` — side-by-side screenshots (left Pi, right dsh)
+- [`shots.html`](./shots.html) — side-by-side screenshot gallery (left Pi, right dsh; embedded JPEG)
+- `shots/` — original PNGs (local only; binary not pushable via GitHub MCP)
 - `pi/` / `dsh/` — raw tool outputs per case
 - `e2e/` — model-driven CLI runs (`dsh-gemini.txt` = ffftest + gemini-3.8-flash)
 - `verdicts.json` / `cases.json` — machine-readable summary
