@@ -1,0 +1,9 @@
+(node:1555235) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+```
+ssrf-protection.ts
+ 389: if (ipVersion === 4 && isBlockedIPv4(normalized)) {
+ 405: function isBlockedIPv4(address: string): boolean {
+ 433: return isBlockedIPv4(ipv4);
+```
+exit 0
