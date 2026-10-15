@@ -1,0 +1,31 @@
+abortable.ts
+ 1- /** Observe cancellation while awaiting work that cannot itself be cancelled (such as import()). */
+ 2: export async function awaitWithAbort<T>(operation: Promise<T>, signal?: AbortSignal): Promise<T> {
+ 3- if (!signal) return operation;
+
+anysearch.ts
+ 60- 
+ 61: async function getApiKey(signal?: AbortSignal): Promise<string | null> {
+ 62- return resolveCredential({
+ 132- signal: options.signal
+ 133: ? AbortSignal.any([AbortSignal.timeout(SEARCH_TIMEOUT_MS), options.signal])
+ 134- : AbortSignal.timeout(SEARCH_TIMEOUT_MS),
+ 133- ? AbortSignal.any([AbortSignal.timeout(SEARCH_TIMEOUT_MS), options.signal])
+ 134: : AbortSignal.timeout(SEARCH_TIMEOUT_MS),
+ 135- });
+
+baizhi.ts
+ 58- const args = searchArguments(query, options);
+ 59: const timeoutSignal = AbortSignal.timeout(SEARCH_TIMEOUT_MS);
+ 60- const signal = options.signal ? AbortSignal.any([timeoutSignal, options.signal]) : timeoutSignal;
+ 59- const timeoutSignal = AbortSignal.timeout(SEARCH_TIMEOUT_MS);
+ 60: const signal = options.signal ? AbortSignal.any([timeoutSignal, options.signal]) : timeoutSignal;
+ 61- if (signal.aborted) throw new Error("Aborted");
+ 78- if (String(url) !== MCP_URL) throw new Error("Baizhi endpoint changed unexpectedly");
+ 79: const requestSignal = cleaningUp ? AbortSignal.timeout(1_500) : signal;
+ 80- return fetch(url, { ...init, redirect: "error", signal: !cleaningUp && init?.signal ? AbortSignal.any([init.signal, requestSignal]) : requestSignal });
+ 79- const requestSignal = cleaningUp ? AbortSignal.timeout(1_500) : signal;
+ 80: return fetch(url, { ...init, redirect: "error", signal: !cleaningUp && init?.signal ? AbortSignal.any([init.signal, requestSignal]) : requestSignal });
+ 81- },
+
+[Continue with cursor="fff_c1"]

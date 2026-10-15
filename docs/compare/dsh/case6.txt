@@ -1,0 +1,20 @@
+brave.ts
+ 48: environmentValue: process.env.BRAVE_API_KEY,
+ 137: environmentValue: process.env.BRAVE_API_KEY,
+ 151: "  2. Set BRAVE_API_KEY environment variable\n" +
+
+exa.ts
+ 75: environmentValue: process.env.EXA_API_KEY,
+ 448: environmentValue: process.env.EXA_API_KEY,
+
+gemini-search.ts
+ 732: "  3. Set OPENAI_API_KEY, BRAVE_API_KEY, PARALLEL_API_KEY, TINYFISH_API_KEY, SEARCH1API_KEY, SEARCHINFINITY_API_KEY, QUERIT_API_KEY, TAVILY_API_KEY, FIRECRAWL_BASE_URL, JINA_API_KEY, SERPDIVE_API_KEY, KAGI_API_KEY, BOCHA_API_KEY, OLLAMA_API_KEY, SEARXNG_BASE_URL, EXA_API_KEY, PERPLEXITY_API_KEY, GEMINI_API_KEY, or CLOUDFLARE_API_KEY env vars\n" +
+
+tavily.ts
+ 58: environmentValue: process.env.TAVILY_API_KEY,
+ 68: const key = process.env[`TAVILY_API_KEY_${slot}`]?.trim();
+ 71: const requestedSlot = Number.parseInt(process.env.TAVILY_API_KEY_INDEX ?? "", 10) || 1;
+ 92: "  2. Set TAVILY_API_KEY environment variable\n" +
+ 156: environmentValue: process.env.TAVILY_API_KEY,
+
+[10+ matches (refine patterns). More available. cursor="fff_c2" to continue]
