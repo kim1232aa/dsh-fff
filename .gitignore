@@ -1,0 +1,4 @@
+node_modules/
+*.tgz
+.fff-data/
+.DS_Store

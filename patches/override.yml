@@ -1,0 +1,7 @@
+# 叠到 profile 的 --patch 或写入 cordis.patch.yml：关掉内置 fs-search，
+# 并把 dsh-fff 切到 override（工具名变为 glob / grep / multi_grep）。
+- id: tool-fs-search
+  disabled: true
+- id: dsh-fff
+  config:
+    mode: override
