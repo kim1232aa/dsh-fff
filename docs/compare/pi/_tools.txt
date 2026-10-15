@@ -1,0 +1,4 @@
+ffgrep
+fffind
+fff-multi-grep
+commands: fff-mode,fff-health,fff-rescan
