@@ -1,0 +1,13 @@
+[0 exact matches. Maybe you meant this?]
+README.md
+ 247: Gather evidence for a claim and return a machine-readable artifact with exact passage citations for manual semantic review. Search results are deduplicated and capped at 20 sources; `fetchContent` fetches at most 5 pages, while stored and retrieved content remains subject to the configured `maxInlineContentChars` `offset`/`limit` bounds.
+
+extract.ts
+ 1144: return textContent.length < 500 && scriptCount > 3;
+
+test/fetch-answer-continuation.test.mjs
+ 114: assert.ok(retrieved.content[0].text.includes(source.slice(0, 1000)));
+ 115: assert.doesNotMatch(retrieved.content[0].text, /ANSWER_PREFIX_/);
+ 157: assert.ok(retrieved.content[0].text.includes(longSource.slice(1000, 2000)));
+
+[Continue with cursor="fff_c3"]
