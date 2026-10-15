@@ -1,0 +1,8 @@
+[info] FFF v0.11.0
+Mode: tools-and-ui
+Git: yes (/workspace/fff-compare/tmp/repo-snapshot/)
+Picker: 233 files
+Frecency: active
+Query tracker: active
+Scanning: no (233 files)
+[info] FFF rescan triggered

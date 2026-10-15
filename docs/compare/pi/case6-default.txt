@@ -1,0 +1,2 @@
+ERROR: TypeError: Cannot read properties of undefined (reading 'execute')
+    at file:///workspace/fff-compare/pi-harness.mjs:31:48
