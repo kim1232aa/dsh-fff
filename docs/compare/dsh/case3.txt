@@ -1,0 +1,4 @@
+ssrf-protection.ts
+ 389: if (ipVersion === 4 && isBlockedIPv4(normalized)) {
+ 405: function isBlockedIPv4(address: string): boolean {
+ 433: return isBlockedIPv4(ipv4);
