@@ -1,0 +1,5 @@
+# dsh-fff — default: tools-only / 旁挂（不影响内置 glob/grep）。
+# override 模式请叠加 patches/override.yml（关掉 tool-fs-search）。
+- insert:
+    - id: dsh-fff
+      name: dsh-fff
