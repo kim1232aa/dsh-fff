@@ -107,4 +107,23 @@
 
 - [x] 对照写明不可实现 + 链接  
 - [x] output_mode / track / commands / 别名已实现  
-- [x] `npm test` + 真实搜仓库（执行中）  
+- [x] `npm test` + 真实搜仓库
+- [x] Pi vs dsh 实测对比（见 [docs/compare/REPORT.md](./docs/compare/REPORT.md)）
+
+---
+
+## 实测对比（2026-10-15 CST）
+
+同一仓库快照上跑 Pi `@ff-labs/pi-fff@0.11.0` 与 dsh-fff 工具 `execute`，报告与截图：
+
+→ **[docs/compare/REPORT.md](./docs/compare/REPORT.md)** · [verdicts.json](./docs/compare/verdicts.json) · [shots/](./docs/compare/shots/)
+
+| 结论 | 细节 |
+|---|---|
+| 用例 1–5、7 | 输出**逐字节相同** |
+| 用例 6 multi-grep | Pi 默认不注册（需 `PI_FFF_MULTIGREP=1`）；打开后相同。dsh 默认 `tools.multiGrep=true`（超集，未改代码） |
+| 用例 8 health/rescan | 核心字段一致，格式不同（Pi slash/`[info]` vs dsh 工具） |
+| 用例 9 outputMode | 仅 dsh 有（MCP 扩展） |
+| E2E | Pi（xai/grok）与 dsh（`antigravity/gemini-3.8-flash`）均调用 `ffgrep`，命中一致：`ssrf-protection.ts` 389/405/433 |
+
+截图为真实工具输出渲染（box 无 xterm），左 Pi / 右 dsh。

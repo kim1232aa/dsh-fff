@@ -2,7 +2,7 @@
 
 DeepSeek Harness plugin wrapping [`@ff-labs/fff-node`](https://www.npmjs.com/package/@ff-labs/fff-node) — fuzzy file find + content grep with a long-lived in-process index.
 
-Port of local Pi extension [`@ff-labs/pi-fff`](https://github.com/dmtrKovalenko/fff/tree/main/packages/pi-fff) v0.11.0 (+ MCP `output_mode`). **Parity checklist:** [PARITY.md](./PARITY.md). Chinese docs: [README.zh-CN.md](./README.zh-CN.md).
+Port of local Pi extension [`@ff-labs/pi-fff`](https://github.com/dmtrKovalenko/fff/tree/main/packages/pi-fff) v0.11.0 (+ MCP `output_mode`). **Parity checklist:** [PARITY.md](./PARITY.md). **Measured Pi vs dsh compare:** [docs/compare/REPORT.md](./docs/compare/REPORT.md). Chinese docs: [README.zh-CN.md](./README.zh-CN.md).
 
 ## Tools
 
