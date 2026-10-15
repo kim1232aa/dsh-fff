@@ -1,0 +1,87 @@
+[
+ {
+  "id": 1,
+  "title": "fffind 模糊文件名",
+  "tool": "find",
+  "args": {
+   "pattern": "ssrf protect"
+  }
+ },
+ {
+  "id": 2,
+  "title": "fffind 拼写错误/模糊",
+  "tool": "find",
+  "args": {
+   "pattern": "yutube extrct"
+  }
+ },
+ {
+  "id": 3,
+  "title": "ffgrep 纯文本",
+  "tool": "grep",
+  "args": {
+   "pattern": "isBlockedIPv4",
+   "limit": 10
+  }
+ },
+ {
+  "id": 4,
+  "title": "ffgrep 正则",
+  "tool": "grep",
+  "args": {
+   "pattern": "export (async )?function fetch\\w+",
+   "limit": 10
+  }
+ },
+ {
+  "id": 5,
+  "title": "ffgrep 路径约束+排除+上下文",
+  "tool": "grep",
+  "args": {
+   "pattern": "AbortSignal",
+   "path": "*.ts",
+   "exclude": "test/",
+   "context": 1,
+   "limit": 5
+  }
+ },
+ {
+  "id": 6,
+  "title": "fff-multi-grep 多模式",
+  "tool": "multi",
+  "args": {
+   "patterns": [
+    "TAVILY_API_KEY",
+    "EXA_API_KEY",
+    "BRAVE_API_KEY"
+   ],
+   "constraints": "*.ts !test/",
+   "limit": 10
+  }
+ },
+ {
+  "id": 7,
+  "title": "ffgrep 拼写错误→模糊回退",
+  "tool": "grep",
+  "args": {
+   "pattern": "retriveContent",
+   "limit": 5
+  }
+ },
+ {
+  "id": 8,
+  "title": "health + rescan",
+  "tool": "health",
+  "args": {}
+ },
+ {
+  "id": 9,
+  "title": "ffgrep outputMode=files_with_matches",
+  "tool": "grep",
+  "args": {
+   "pattern": "isBlockedIPv4",
+   "outputMode": "files_with_matches",
+   "limit": 10
+  }
+ }
+]
